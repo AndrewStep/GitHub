@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarStore.WEBUI", "CarStore\CarStore.WEBUI.csproj", "{ABB21E55-BF8A-4C71-AC4B-4549C41B4116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarStore.DAL", "CarStore.DAL\CarStore.DAL.csproj", "{2B966D60-3DB1-44CF-BD2C-58555832A038}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABB21E55-BF8A-4C71-AC4B-4549C41B4116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB21E55-BF8A-4C71-AC4B-4549C41B4116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB21E55-BF8A-4C71-AC4B-4549C41B4116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB21E55-BF8A-4C71-AC4B-4549C41B4116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B966D60-3DB1-44CF-BD2C-58555832A038}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B966D60-3DB1-44CF-BD2C-58555832A038}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B966D60-3DB1-44CF-BD2C-58555832A038}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B966D60-3DB1-44CF-BD2C-58555832A038}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F313230B-F0FD-42E0-AE88-8B31E09EB47D}
+	EndGlobalSection
+EndGlobal

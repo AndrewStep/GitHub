@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-light navbar-fixed-top" @*role="navigation"*@ style="background-color: #00fff2;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <form class="navbar-brand">
+                    <img width="150" height="70" src="~/Images/logo.png" />
+                </form>
+            </div>
+            @Html.Action("Summary", "Account")
+            @Html.Action("Summary", "Cart")
+            <div class="navbar-collapse collapse" style="margin-top:8px;">
+                <ul class="nav navbar-nav">
+                        @Html.ActionLink("Головна", "Index", "Store", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Наші контакти", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        @Html.ActionLink("Про нас", "About", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                       @Html.ActionLink("Оплата та доставка", "Payment", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </ul>
+            </div>
+        </div>
+    </div>
+    @*<div class="visible-xs">
+        @Html.Action("Menu", "Nav", new { horizontalLayout = true })
+    </div>*@
+
+
+
+    <div @*class="row panel"*@>
+        @*<div id="categories" class="col-xs-3 hidden-xs">
+            @Html.Action("Menu", "Nav")
+        </div>*@
+        @*<div class="col-xs-12 col-sm-8">*@
+            <div class="container body-content">
+                @RenderBody()
+                <center>
+                    <div class="container" style="margin-top:5px;">
+                        <div class="navbar-collapse collapse">
+                            <a href='@Url.Action("Index", "Store")'>
+                                <img width="30" height="30" src="~/Images/home.png" />
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100006501695541">
+                                <img width="40" height="40" src="~/Images/facebook.png" />
+                            </a>
+                            <a href="https://www.instagram.com/andriiprimenko/?hl=uk">
+                                <img width="30" height="30" src="~/Images/instagram.png" />
+                            </a>
+                            <a href="https://twitter.com/KTuFe0rEkBbJbbc">
+                                <img width="30" height="30" src="~/Images/twitter.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <hr />
+                    <footer>
+                        <a class="my-2 my-sm-0 text-info" href='@Url.Action("Index", "Admin")'>
+                            &copy;2015-@DateTime.Now.Year - Андрій Применко
+                        </a>
+                    </footer>
+                </center>
+            </div>
+        </div>
+            <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+            <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
