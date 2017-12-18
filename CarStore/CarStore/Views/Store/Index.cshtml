@@ -7,3 +7,19 @@
 <center>
     <h2>Мій Магазин</h2>
 </center>
+<form id="form1" runat="server">
+    <div>
+        <%
+        foreach (CarStore.Models.Car car in GetCars())
+        {
+        Response.Write(String.Format(@"
+        <div class='item'>
+            <h3>{0}</h3>
+            {1}
+            <h4>{2:c}</h4>
+        </div>",
+        car.Name, car.Description, car.Price));
+        }
+        %>
+    </div>
+</form>
