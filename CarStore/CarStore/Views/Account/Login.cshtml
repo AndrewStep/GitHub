@@ -1,0 +1,47 @@
+﻿@model CarStore.ViewModels.LoginModel
+
+@*<br/>
+<br/>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+        </div>
+    
+    </div>
+    <p><button type="submit">Войти</button></p>
+}*@
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div style="margin-top: 20px; color:red;">
+        @Html.ValidationMessageFor(x => x.Email);
+    </div>
+    <br />
+    <div>
+        @Html.ValidationSummary()
+        <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+        <p>
+            <label>Email</label><br />
+            @Html.EditorFor(x => x.Email)
+        </p>
+        <p>
+            <label>Пароль</label><br />
+            @Html.EditorFor(x => x.Password)
+        </p>
+        <p><button type="submit">Войти</button></p>
+    </div>
+}

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace CarStore.Controllers
 {
+    
     public class HomeController : Controller
     {
         public ViewResult Contact()
@@ -13,6 +14,7 @@ namespace CarStore.Controllers
             return View();
         }
 
+        [Authorize(Roles = "admin")]
         public ViewResult About()
         {
             return View();
